@@ -23,14 +23,11 @@ jobs:
         with:
           node-version: 21
 
-      - name: Install Yarn
-        run: npm install -g yarn
-
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: npm ci
 
       - name: Build
-        run: CI='' yarn build
+        run: npm run build --if-present
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1.7.0
