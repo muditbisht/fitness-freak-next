@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'SF Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: local('SF Pro'), local('SF Pro'), url('../fonts/FontsFree-Net-SFProDisplay-Regular.ttf') format('truetype')
+  }
+}
+body {
+  color: rgb(239, 242, 244);
+  background-color: #EFF2F4;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

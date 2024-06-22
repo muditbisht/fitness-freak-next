@@ -1,0 +1,45 @@
+.auth-page {
+    width: 100%;
+    min-height: 100%;
+    display: grid;
+    margin-top: 100px;
+    font-family: SF Pro;
+    font-style: normal;
+
+    .auth-container {
+        margin-bottom: 10em;
+        background: #FFFFFF;
+        border-radius: 10px;
+        box-sizing: border-box;
+        max-width: 800px;
+        width: 90%;
+        place-self: center;
+        padding: 35px 50px 35px 50px;
+
+        @media(max-width: ${responsive.small}){
+            font-size: 10px;
+        }
+
+        .heading{
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #7e7e7e;
+            cursor: pointer;
+            .chng-btn{
+                width: 40%;
+                height: 3em;
+                text-align: center;
+                border-radius: 5px;
+                border-style: none;
+                color: #050831;
+                background-color: #eeeeee;
+            }
+            .active{
+                    background-color: #43b9dd;
+                }
+        }
+    }
+}
