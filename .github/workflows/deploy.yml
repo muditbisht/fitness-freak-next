@@ -42,7 +42,7 @@ jobs:
           aws sts get-caller-identity
 
       - name: Deploy to S3
-        run: aws s3 sync ./build ${{ secrets.S3_BUCKET_URL }}
+        run: aws s3 sync ./out ${{ secrets.S3_BUCKET_URL }}
 
       - name: Invalidate CloudFront Cache
-        run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "out/*"
+        run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
